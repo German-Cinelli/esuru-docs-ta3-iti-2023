@@ -1,0 +1,1780 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Documentación e-suru</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="shortcut icon" href="assets/images/logo.png">
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+
+	<!-- FontAwesome JS-->
+	<script defer src="assets/fontawesome/js/all.min.js"></script>
+
+	<!-- Plugins CSS -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+	<link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
+
+	<!-- Theme CSS -->
+	<link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+
+	<style>
+		.vertical-line {
+			display: inline-block;
+			width: 2px;
+			height: 1em;
+			background-color: #5DADE2;
+			margin: 0 5px;
+		}
+	</style>
+
+</head>
+
+<body class="docs-page">
+	<header class="header fixed-top">
+		<div class="branding docs-branding">
+			<div class="container-fluid position-relative py-2">
+				<div class="docs-logo-wrapper">
+					<button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none"
+						type="button">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+					<div class="site-logo">
+						<a class="navbar-brand" href="index.html">
+							<img class="logo-icon me-2" src="assets/images/logo.png" width="48px" alt="logo">
+							<span class="logo-text">e-Suru
+								<span class="text-alt">Docs</span>
+							</span>
+						</a>
+					</div>
+				</div><!--//docs-logo-wrapper-->
+				<!--<div class="docs-top-utilities d-flex justify-content-end align-items-center">
+					<div class="top-search-box d-none d-lg-flex">
+						<form class="search-form">
+							<input type="text" placeholder="Search the docs..." name="search"
+								class="form-control search-input">
+							<button type="submit" class="btn search-btn" value="Search"><i
+									class="fas fa-search"></i></button>
+						</form>
+					</div>
+
+					<ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+						<li class="list-inline-item"><a href="#"><i class="fab fa-github fa-fw"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fab fa-slack fa-fw"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fab fa-product-hunt fa-fw"></i></a></li>
+					</ul>
+					<a href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderdocs-free-bootstrap-5-documentation-template-for-software-projects/"
+						class="btn btn-primary d-none d-lg-flex">Download</a>
+				</div>-->
+			</div><!--//container-->
+		</div><!--//branding-->
+	</header><!--//header-->
+
+
+	<div class="docs-wrapper">
+		<div id="docs-sidebar" class="docs-sidebar">
+			<div class="top-search-box d-lg-none p-3">
+				<form class="search-form">
+					<input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+					<button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+				</form>
+			</div>
+			<nav id="docs-nav" class="docs-nav navbar">
+				<ul class="section-items list-unstyled nav flex-column pb-3">
+
+					<li class="nav-item section-title">
+						<a class="nav-link scrollto active" href="#section-get-started">
+							<span class="theme-icon-holder me-2">
+								<i class="fas fa-home"></i>
+							</span>
+							Inicio
+						</a>
+					</li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-requeriments">Requisitos</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-deploy">Despliegue</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-panel">Panel administrativo</a></li>
+
+					<li class="nav-item section-title mt-3">
+						<a class="nav-link scrollto" href="#section-roles">
+							<span class="theme-icon-holder me-2">
+								<i class="fas fa-box"></i>
+							</span>
+							Roles
+						</a>
+					</li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-roles">Jerarquía</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-permissons">Permisos</a></li>
+
+					<li class="nav-item section-title mt-3">
+						<a class="nav-link scrollto" href="#section-users">
+							<span class="theme-icon-holder me-2">
+								<i class="fas fa-user"></i>
+							</span>
+							Usuarios
+						</a>
+					</li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-users-index">Listar usuarios</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-users-create">Crear usuario</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-users-edit">Editar usuario</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-users-update-password">Actualizar contraseña</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-users-lock">Bloquear acceso</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-users-unlock">Desbloquear acceso</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-users-activity">Actividades</a></li>
+					
+					<!-- services -->
+					<li class="nav-item section-title mt-3">
+						<a class="nav-link scrollto" href="#section-services">
+							<span class="theme-icon-holder me-2">
+								<i class="fas fa-cogs"></i>
+							</span>Servicios
+						</a>
+					</li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-services-index">Listar servicios</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-services-create">Crear servicio</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-services-edit">Editar servicio</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-services-delete">Eliminar servicio</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-services-restore">Restaurar servicio</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-services-tree">Jerarquía de servicios</a></li>
+					<!-- /.services -->
+
+					<li class="nav-item section-title mt-3">
+						<a class="nav-link scrollto" href="#section-plans">
+							<span class="theme-icon-holder me-2">
+								<i class="fas fa-cubes"></i>
+							</span>
+							Planes
+						</a>
+					</li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-plans-index">Listar planes</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-plans-create">Crear plan</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-plans-edit">Editar plan</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-plans-delete">Eliminar plan</a></li>
+
+
+					<li class="nav-item section-title mt-3">
+						<a class="nav-link scrollto" href="#section-providers">
+							<span class="theme-icon-holder me-2">
+								<i class="fas fa-street-view"></i>
+							</span>
+							Prestador
+						</a>
+					</li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-provider-form">Formulario registro</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-provider-profile">Perfil</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-provider-avatar">Avatar</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-provider-data">Datos personales</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-provider-resume">Resumen</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-provider-experiences">Experiencia laboral</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-provider-courses">Formación académica</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-provider-services">Servicios</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-provider-vehicle">Transporte</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-provider-plans">Planes</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-provider-mercadopago">Módulo Mercadopago</a></li>
+
+
+					<li class="nav-item section-title mt-3">
+						<a class="nav-link scrollto" href="#section-web">
+							<span class="theme-icon-holder me-2">
+								<i class="fas fa-laptop-code"></i>
+							</span>
+							Web
+						</a>
+					</li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-customers">Clientes</a></li>
+
+				</ul>
+
+			</nav><!--//docs-nav-->
+		</div><!--//docs-sidebar-->
+
+		<style>
+			
+		</style>
+		<div class="docs-content">
+			<div class="container">
+				<article id="section-get-started" class="docs-article">
+					<header class="docs-header">
+						<h1 class="docs-heading">Inicio</h1>
+						<section class="docs-intro">
+							<p>A continuación se documenta los requisitos necesarios para desplegar el proyecto en un entorno local.</p>
+						</section><!--//docs-intro-->
+
+						<section id="item-requeriments" class="docs-section">
+
+							<p>
+								El primer paso será realizar la instalación de un servidor apache que proporciona los componentes esenciales y necesarios como: PHP, MariaDB y phpMyAdmin entre otros.
+								Recomendamos realizar la instalación de Xampp, para hacerlo puedes acceder a su <a href="https://www.apachefriends.org/es/download.html" target="_blank">sitio web</a> para obtener la versión <strong>8.2.4</strong>.
+							</p>
+							<p>Finalizada la instalación de Xampp, iniciaremos el servicio de Apache y MySQL desde el panel de control de Xampp:</p>
+							<img src="assets/images/installation/xampp.png" class="img-thumbnail" alt="">
+							<p class="mt-3">El siguiente paso será crear una base de datos. Para ello accederemos desde el navegador al siguiente enlace: <a href="http://localhost/phpmyadmin/" target="_blank">http://localhost/phpmyadmin/</a> y presionamos sobre el botón "Nueva".</p>
+							<p>La nombraremos <strong>"esuru"</strong> utilizando la configuración utf8mb4_general_ci como se muestra en la siguiente imagen:</p>
+							<img src="assets/images/installation/create_database.png" class="img-thumbnail" alt="">
+						
+							<p class="mt-3">Utilizamos <strong>Composer</strong> para el manejo de dependencias del proyecto.
+								Si se encuentra en un entorno de Windows puedes descargar el instalador <a href="https://getcomposer.org/Composer-Setup.exe">aquí</a>.
+								Si te encuentras en un ambiente Linux o Mac, puedes acceder a su <a href="https://getcomposer.org/" target="_blank">documentación</a> oficial.
+							</p>
+
+							<p>Una vez finalizada la instalación de composer y teniendo el servidor apache encendido podemos continuar.</p>
+
+						</section>
+
+						<section id="item-deploy" class="docs-section">
+							<h4>
+								<span class="vertical-line"></span>
+								Despliegue
+							</h4>
+							
+							<p>
+								Clone el repositorio en su directorio actual y descomprima el archivo:
+							</p>
+							<div class="docs-code-block">
+								<pre class="shadow-lg rounded"><code class="bash">$ git clone https://github.com/German-Cinelli/ta3-iti-2023</code></pre>
+							</div><!--//docs-code-block-->
+
+							<div class="callout-block callout-block-info">
+								<div class="content">
+									<h4 class="callout-title">
+										<span class="callout-icon-holder me-1">
+											<i class="fas fa-info-circle"></i>
+										</span><!--//icon-holder-->
+										Nota
+									</h4>
+									<p>
+										Si no tiene git instalado, puedes descargar el proyecto de forma manual desde <a href="https://github.com/German-Cinelli/ta3-iti-2023" target="_blank">https://github.com/German-Cinelli/ta3-iti-2023</a>
+									</p>
+								</div><!--//content-->
+							</div><!--//callout-block-->
+
+							<p class="mt-5">
+								Dentro de la raiz del proyecto cambie el nombre del archivo <strong>.env.example</strong> a <strong>.env</strong>.
+								Posteriormente abralo con cualquier editor de textos y modifique los valores de las siguientes constantes para que queden de la siguiente manera:
+							</p>
+
+							<ul>
+								<li>DB_DATABASE=esuru</li>
+								<li>DB_USERNAME=root</li>
+								<li>DB_PASSWORD=</li>
+							</ul>
+							
+							<p class="mt-3">
+								Navegue hasta el directorio raiz del proyecto con el comando <code>cd</code> y ejecute:
+							</p>
+
+							<div class="docs-code-block">
+								<pre class="shadow-lg rounded"><code class="bash">$ composer install</code></pre>
+							</div>
+
+							<p>
+								Genere una clave de cifrado única para la aplicación:
+							</p>
+							<div class="docs-code-block">
+								<pre class="shadow-lg rounded"><code class="bash">$ php artisan key:generate</code></pre>
+							</div>
+
+							<p>
+								Crea un enlace simbólico para el almacenamiento de archivos:
+							</p>
+							<div class="docs-code-block">
+								<pre class="shadow-lg rounded"><code class="bash">$ php artisan storage:link</code></pre>
+							</div>
+
+							<p>
+								Genere toda la estructura de bases de datos. El parámetro <code>--seed</code> inserta los datos de prueba necesarios.
+							</p>
+							<div class="docs-code-block">
+								<pre class="shadow-lg rounded"><code class="bash">$ php artisan migrate --seed</code></pre>
+							</div>
+
+							<p>
+								Para levantar el proyecto ejecute:
+							</p>
+							<div class="docs-code-block">
+								<pre class="shadow-lg rounded"><code class="bash">$ php artisan serve</code></pre>
+							</div>
+
+							<p>
+								Abra en su navegador el enlace proporcionado en su interfaz de comandos: <code>http://127.0.0.1:8000/</code>
+							</p>
+
+							<div class="callout-block callout-block-info">
+								<div class="content">
+									<h4 class="callout-title">
+										<span class="callout-icon-holder me-1">
+											<i class="fas fa-info-circle"></i>
+										</span><!--//icon-holder-->
+										Nota
+									</h4>
+									<p>
+										Puedes detener el servidor presionando <code>ctrl+c</code> en su terminal.
+									</p>
+								</div><!--//content-->
+							</div><!--//callout-block-->
+
+						</section>
+
+						<section id="item-panel" class="docs-section">
+							<h4>
+								<span class="vertical-line"></span>
+								Primeros pasos
+							</h4>
+							
+							<p class="mt-3">La plataforma se divide en dos unidades. Por un lado, el <strong>panel administrativo</strong> diseñado exclusivamente para que los usuarios con privilegios de <strong>administrador</strong> y <strong>soporte</strong> puedan gestionar el contenido. Por otro lado, tenemos la parte del <strong>front</strong> accesible para todos los usuarios y visitantes.</p>
+							
+							<p>Para acceder al panel administrativo es necesario autenticarse con un usuario de tipo admin desde el siguiente enlace: <a href="http://127.0.0.1:8000/login" target="_blank">http://127.0.0.1:8000/login</a></p>
+
+							<p>Credenciales:</p>
+							<ul>
+								<li>Correo: <strong>admin@esuru.uy</strong></li>
+								<li>Contraseña: <strong>1234</strong></li>
+							</ul>
+						</section>
+
+					</header>
+
+					<section class="docs-section" id="section-roles">
+						<h1 class="docs-heading">Roles</h1>
+						<section class="docs-intro">
+							<p>
+								Los roles permiten asignar diferentes niveles de autoridad y permisos a los usuarios con el fin de controlar el acceso y la funcionalidad dentro del sistema. 
+								Determinan qué acciones y recursos pueden realizar los usuarios en funcion al rol.
+							</p>
+						</section><!--//docs-intro-->
+
+						<section id="item-roles" class="docs-section">
+							<h4>
+								<span class="vertical-line"></span>
+								Jerarquía
+							</h4>
+							<ul>
+								<li><strong>Administrador:</strong> Acceso a todas las funcionalidades del sistema. Puede ingresar usuarios, servicios, listar proveedores, clientes, etc.</li>
+								<li><strong>Soporte:</strong> Encargados de la resepción y revisión de reportes realizados por los clientes. Puede acceder a los datos personales de cada proveedor junto al listado e información de cada trabajo.</li>
+								<li><strong>Prestador:</strong> Los prestadores de servicios pueden acceder a su perfil para editar sus datos peronales, formación académica y experiencia laboral. Además detallan que tipo de servicios brindan y acceden a los datos de contacto del cliente cuando les realizan una solicitud de tarbajo por sus servicios.</li>
+								<li><strong>Cliente:</strong> Se registran en la plataforma por cuenta propia. Pueden listar servicios y acceder al perfil de los prestadores.</li>
+							</ul>
+						</section>
+
+						<section id="item-permissons" class="docs-section">
+							<h4>
+								<span class="vertical-line"></span>
+								Permisos
+							</h4>
+							<p>
+								Se utilizan para controlar el acceso y las acciones que los usuarios pueden realizar dentro de la plataforma dependiendo del rol. Permiten mostrar u ocultar elementos de la interfaz gráfica para proteger funcionalidades específicas y realizar validaciones para determinar si un usuario tiene acceso o no a un recurso.
+							</p>
+						</section>
+					</section>
+
+
+					<section class="docs-section" id="section-users">
+						<h1 class="docs-heading">Usuarios</h1>
+
+						<section class="docs-intro">
+							<p>Dentro del panel administrativo, el administrador podrá gestionar usuarios de tipo <strong>administrador</strong> y <strong>soporte</strong>.</p>
+						</section><!--//docs-intro-->
+
+						<section id="item-users-index" class="docs-section">
+							<!-- Listar usuario -->
+							<h4>
+								<span class="vertical-line"></span>
+								Listado:
+							</h4>
+							<p>Navegue hasta <strong>Usuarios > Listar usuarios</strong>.</p>
+							<p>Visualizará en una tabla los usuarios donde podrá realizar acciones sobre ellos.</p>
+
+							<img src="assets/images/users/index/list.png" class="img-thumbnail" alt="">
+						</section>
+
+						<section id="item-users-create" class="docs-section">
+							<!-- Crear usuario -->
+							<h4>
+								<span class="vertical-line"></span>
+								Crear usuario:
+							</h4>
+							<p>Navegue hasta <strong>Usuarios</strong> y presione sobre el botón <i class="fa fa-plus text-primary"></i>.</p>
+							<p>A continuación se despliega un formulario para ingresar los datos.</p>
+
+							<img src="assets/images/users/create/form.png" width="700px" class="img-thumbnail" alt="">
+
+							<div class="callout-block callout-block-info">
+								<div class="content">
+									<h4 class="callout-title">
+										<span class="callout-icon-holder me-1">
+											<i class="fas fa-info-circle"></i>
+										</span><!--//icon-holder-->
+										Nota
+									</h4>
+									<p>
+										Los campos marcados con <span class="text-danger">*</span> son requeridos.
+									</p>
+								</div><!--//content-->
+							</div><!--//callout-block-->
+
+							<p>Se realizan las siguientes validaciones:</p>
+							<ul>
+
+								<li>
+									Nombre:
+									<ul>
+										<li>Requerido</li>
+									</ul>
+								</li>
+
+								<li>
+									Apellido:
+									<ul>
+										<li>Requerido</li>
+									</ul>
+								</li>
+									
+								<li>
+									Rol:
+									<ul>
+										<li>Requerido</li>
+										<li>Verificar que sea existente</li>
+										<li>Checkear que sea un rol de tipo <u>Administrador</u> o <u>Soporte</u>.</li>
+									</ul>
+								</li>
+
+								<li>
+									Correo:
+									<ul>
+										<li>Requerido</li>
+										<li>Correo válido</li>
+										<li>Verificar que no exista otro usuario con el correo ingresado</li>
+									</ul>
+								</li>
+
+								<li>
+									Contraseña:
+									<ul>
+										<li>Requerida</li>
+										<li>Mínimo 8 caracteres</li>
+										<li>Al menos una letra mayúscula y un número</li>
+									</ul>
+								</li>
+
+								<li>
+									Confirmar contraseña:
+									<ul>
+										<li>Requerida</li>
+										<li>Identica a la contraseña ingresada anteriormente</li>
+									</ul>
+								</li>
+
+								<li>
+									Imagen de perfil:
+									<ul>
+										<li>Requerida</li>
+										<li>Tipo JPG, JPEG, PNG</li>
+									</ul>
+								</li>
+
+							</ul>
+
+							<p>En caso que alguna de las validaciones no se cumplan se procede a mostrar los mensajes pertinentes:</p>
+
+							<img src="assets/images/users/create/validation.png" width="700px" class="img-thumbnail" alt="">
+
+							<p class="mt-5">Una vez realizadas las validaciones necesarias se despliega una notificación:</p>
+
+							<img src="assets/images/users/create/success.png" class="img-thumbnail" alt="">
+						</section>
+
+						<section id="item-users-edit" class="docs-section">
+							<h4>
+								<span class="vertical-line"></span>Editar usuario:
+							</h4>
+
+
+							<p>Presione sobre el ícono <i class="fa fa-edit text-warning"></i> para abrir el formulario de edición.</p>
+
+							<img src="assets/images/users/edit/form.png" width="700px" class="img-thumbnail" alt="">
+
+							<div class="callout-block callout-block-info">
+								<div class="content">
+									<h4 class="callout-title">
+										<span class="callout-icon-holder me-1">
+											<i class="fas fa-info-circle"></i>
+										</span><!--//icon-holder-->
+										Nota
+									</h4>
+									<p>
+										Los campos marcados con <span class="text-danger">*</span> son requeridos.
+									</p>
+								</div><!--//content-->
+							</div><!--//callout-block-->
+
+							<p>Se realizan las siguientes validaciones:</p>
+							<ul>
+
+								<li>
+									Nombre:
+									<ul>
+										<li>Requerido</li>
+									</ul>
+								</li>
+
+								<li>
+									Apellido:
+									<ul>
+										<li>Requerido</li>
+									</ul>
+								</li>
+									
+								<li>
+									Rol:
+									<ul>
+										<li>Requerido</li>
+										<li>Verificar que sea existente</li>
+										<li>Checkear que sea un rol de tipo <u>Administrador</u> o <u>Soporte</u>.</li>
+									</ul>
+								</li>
+
+								<li>
+									Correo:
+									<ul>
+										<li>Requerido</li>
+										<li>Correo válido</li>
+										<li>Verificar que no exista otro usuario con el correo ingresado</li>
+									</ul>
+								</li>
+
+								<li>
+									Imagen de perfil:
+									<ul>
+										<li>Tipo JPG, JPEG, PNG</li>
+									</ul>
+								</li>
+
+							</ul>
+
+							<p class="mt-5">Se despliega una notificación sobre la acción:</p>
+
+							<img src="assets/images/users/edit/success.png" alt="">
+						</section>
+
+						<section id="item-users-update-password" class="docs-section">
+							<h4>
+								<span class="vertical-line"></span>
+								Actualizar contraseña:
+							</h4>
+
+							<p>Presione sobre el ícono <i class="fa fa-lock" style="color: #0d6efd"></i> para abrir el formulario de actualización de contraseña.</p>
+
+							<img src="assets/images/users/update_password/form.png" width="700px" class="img-thumbnail" alt="">
+
+							<div class="callout-block callout-block-info">
+								<div class="content">
+									<h4 class="callout-title">
+										<span class="callout-icon-holder me-1">
+											<i class="fas fa-info-circle"></i>
+										</span><!--//icon-holder-->
+										Nota
+									</h4>
+									<p>
+										Los campos marcados con <span class="text-danger">*</span> son requeridos.
+									</p>
+								</div><!--//content-->
+							</div><!--//callout-block-->
+
+							<p>Se realizan las siguientes validaciones:</p>
+							<ul>
+
+								<li>
+									Contraseña:
+									<ul>
+										<li>Requerida</li>
+										<li>Mínimo 8 caracteres</li>
+										<li>Al menos una letra mayúscula y un número</li>
+									</ul>
+								</li>
+
+								<li>
+									Confirmar contraseña:
+									<ul>
+										<li>Requerida</li>
+										<li>Identica a la contraseña ingresada anteriormente</li>
+									</ul>
+								</li>
+
+							</ul>
+
+							<p class="mt-5">Se despliega una notificación sobre la acción:</p>
+
+							<img src="assets/images/users/update_password/success.png" class="img-thumbnail" alt="">
+						</section>
+
+						<section id="item-users-lock" class="docs-section">
+							<h4>
+								<span class="vertical-line"></span>
+								Bloquear acceso
+							</h4>
+
+							<p>Además, los administradores pueden bloquear el acceso a los usuarios para que no puedan iniciar sesión en la plataforma.</p>
+
+							<p>Presione sobre el ícono <i class="fa fa-toggle-on text-success"></i> para desactivar un usuario.</p>
+
+							<p>Se despliega una notificación sobre la acción:</p>
+
+							<img src="assets/images/users/disabled/success.png" class="img-thumbnail" alt="">
+						</section>
+
+						<section id="item-users-unlock" class="docs-section">
+							<h4>
+								<span class="vertical-line"></span>
+								Desbloquear acceso
+							</h4>
+
+							<p>Presione sobre el ícono <i class="fa fa-toggle-off"></i> para activar un usuario.</p>
+
+							<p>Se despliega una notificación sobre la acción:</p>
+
+							<img src="assets/images/users/enabled/success.png" class="img-thumbnail" alt="">
+
+							<div class="callout-block callout-block-success mt-5">
+								<div class="content">
+									<h4 class="callout-title">
+										<span class="callout-icon-holder me-1">
+											<i class="fas fa-thumbs-up"></i>
+										</span><!--//icon-holder-->
+										Tip
+									</h4>
+									<p>
+										Para saber si un usuario tiene bloqueado el acceso a la plataforma acceda al <a href="#item-5-1">Listado de usuarios</a>.
+									</p>
+									<p>
+										Los usuarios bloqueados tendrán un ícono <i class="fa fa-circle text-danger"></i> mientras que los que tienen acceso aparecerán en verde <i class="fa fa-circle text-success"></i>.
+									</p>
+								</div><!--//content-->
+							</div><!--//callout-block-->
+						</section>
+
+						<section id="item-users-activity" class="docs-section">
+							<h4>
+								<span class="vertical-line"></span>
+								Actividad
+							</h4>
+
+							<p>Se lleva un registro sobre las acciones que realiza cada usuario en la plataforma. Para ver el registro de actividades de determinado usuario, pulse sobre el ícono <strong><i class="fa fa-user text-info"></i> Ver perfil</strong> en el <strong>listado</strong> de usuarios.</p>
+
+							<img src="assets/images/services/activity/activity.png" class="img-thumbnail" alt="">
+						</section>
+
+					</section><!--//section-->
+
+
+					<!-- services -->
+					<section class="docs-section" id="section-services">
+						<h1 class="docs-heading">Servicios</h1>
+						<section class="docs-intro">
+							<p>En nuestra plataforma de conexión entre clientes y especialistas, adoptamos la estrategia de predefinir los servicios ofrecidos, brindando a los prestadores la libertad de elegir y personalizar cuáles de ellos desean brindar.</p>
+							<p>Una ventaja importante es que agiliza las búsquedas y el filtrado, lo que ahorra tiempo y esfuerzo al evitar la necesidad de revisar perfiles individualmente para verificar si un prestador ofrece el servicio requerido.</p>
+							<p>Además, al permitir que los prestadores seleccionen los servicios que desean brindar, se logra una mayor precisión en las ofertas. Esto garantiza que los profesionales estén proporcionando exactamente lo que desean ofrecer, evitando cualquier malentendido con los clientes y asegurando una claridad mutua sobre el servicio en cuestión.</p>
+						</section><!--//docs-intro-->
+
+						<br>
+
+						<section id="item-services-index" class="docs-section">
+							<!-- Listar servicio -->
+							<h4>
+								<span class="vertical-line"></span>
+								Listado:
+							</h4>
+							<p>Navegue hasta <strong>Servicios > Listado</strong>.</p>
+							
+							<img src="assets/images/services/index/list.png" class="img-thumbnail" alt="">
+						</section>
+
+						<section id="item-services-create" class="docs-section">
+							<!-- Crear servicio -->
+							<h4>
+								<span class="vertical-line"></span>
+								Crear servicio:
+							</h4>
+							<p>Navegue hasta <strong>Usuarios > Listado</strong> y presione sobre el botón <i class="fa fa-plus text-primary"></i>.</p>
+							<p>A continuación se despliega un formulario para ingresar los datos.</p>
+
+							<img src="assets/images/services/create/form.png" width="700px" class="img-thumbnail" alt="">
+
+							<div class="callout-block callout-block-info">
+								<div class="content">
+									<h4 class="callout-title">
+										<span class="callout-icon-holder me-1">
+											<i class="fas fa-info-circle"></i>
+										</span><!--//icon-holder-->
+										Nota
+									</h4>
+									<p>
+										Los campos marcados con <span class="text-danger">*</span> son requeridos.
+									</p>
+								</div><!--//content-->
+							</div><!--//callout-block-->
+
+							<p>Se realizan las siguientes validaciones:</p>
+							<ul>
+
+								<li>
+									Nombre:
+									<ul>
+										<li>Requerido</li>
+										<li>Máximo de 75 caracteres</li>
+										<li>Verificar que no exista otro servicio con el nombre ingresado</li>
+									</ul>
+								</li>
+
+								<li>
+									Servicio padre:
+									<ul>
+										<li>Requerido</li>
+									</ul>
+								</li>
+									
+								<li>
+									Descripción:
+									<ul>
+										<li>Requerida</li>
+										<li>Máximo de 255 caracteres</li>
+									</ul>
+								</li>
+
+								<li>
+									Imagen:
+									<ul>
+										<li>Requerida</li>
+										<li>Tipo JPG, JPEG, PNG</li>
+									</ul>
+								</li>
+
+							</ul>
+
+							<p>En caso que alguna de las validaciones no se cumplan se procede a mostrar los mensajes pertinentes:</p>
+
+							<img src="assets/images/services/create/validation.png" width="700px" class="img-thumbnail" alt="">
+
+							<p class="mt-5">Una vez realizadas las validaciones necesarias se despliega una notificación:</p>
+
+							<img src="assets/images/services/create/success.png" class="img-thumbnail" alt="">
+						</section>
+
+
+						<section id="item-services-edit" class="docs-section">
+							<h4>
+								<span class="vertical-line"></span>
+								Editar servicio:
+							</h4>
+
+							<p>Presione sobre el ícono <i class="fa fa-edit text-warning"></i> para abrir el formulario de edición.</p>
+
+							<img src="assets/images/services/edit/form.png" width="700px" class="img-thumbnail" alt="">
+
+							<div class="callout-block callout-block-info">
+								<div class="content">
+									<h4 class="callout-title">
+										<span class="callout-icon-holder me-1">
+											<i class="fas fa-info-circle"></i>
+										</span><!--//icon-holder-->
+										Nota
+									</h4>
+									<p>
+										Los campos marcados con <span class="text-danger">*</span> son requeridos.
+									</p>
+								</div><!--//content-->
+							</div><!--//callout-block-->
+
+							<p>Se realizan las siguientes validaciones:</p>
+							<ul>
+
+								<li>
+									Nombre:
+									<ul>
+										<li>Requerido</li>
+										<li>Máximo de 75 caracteres</li>
+										<li>Verificar que no exista otro servicio con el nombre ingresado</li>
+									</ul>
+								</li>
+
+								<li>
+									Servicio padre:
+									<ul>
+										<li>Requerido</li>
+									</ul>
+								</li>
+									
+								<li>
+									Descripción:
+									<ul>
+										<li>Requerida</li>
+										<li>Máximo de 255 caracteres</li>
+									</ul>
+								</li>
+
+								<li>
+									Imagen:
+									<ul>
+										<li>Tipo JPG, JPEG, PNG</li>
+									</ul>
+								</li>
+
+							</ul>
+
+							<p class="mt-5">Se despliega una notificación sobre la acción:</p>
+
+							<img src="assets/images/services/edit/success.png" alt="">
+						</section>
+
+						<section id="item-services-delete" class="docs-section">
+							<h4>
+								<span class="vertical-line"></span>
+								Eliminar servicio
+							</h4>
+
+							<p>Presione sobre el ícono <i class="fa fa-trash text-danger"></i> para eliminar un servicio.</p>
+
+							<div class="callout-block callout-block-warning my-5">
+								<div class="content">
+									<h4 class="callout-title">
+										<span class="callout-icon-holder me-1">
+											<i class="fas fa-bullhorn"></i>
+										</span><!--//icon-holder-->
+										Atención
+									</h4>
+									<p>Si el servicio que se desea eliminar contiene <strong>servicios hijos</strong> se le notificará la siguiente alerta.</p>
+								</div><!--//content-->
+							</div><!--//callout-block-->
+
+							<img src="assets/images/services/delete/error.png" class="img-thumbnail" alt="">
+
+							<p class="mt-3">Caso contrario se despliega una notificación sobre la acción:</p>
+
+							<img src="assets/images/services/delete/success.png" class="img-thumbnail" alt="">
+						</section>
+							
+						<section id="item-services-restore" class="docs-section">
+							<h4>
+								<span class="vertical-line"></span>
+								Restaurar servicio
+							</h4>
+
+							<p>Presione sobre el ícono <i class="fa fa-recycle text-success"></i> para restaurar un servicio.</p>
+
+							<p>Se despliega una notificación sobre la acción:</p>
+
+							<img src="assets/images/services/restore/success.png" class="img-thumbnail" alt="">
+						</section>
+
+						<section id="item-services-tree" class="docs-section">
+							<h4>
+								<span class="vertical-line"></span>
+								Jerarquía de servicios
+							</h4>
+							
+							<p>Navegue hasta <strong>Servicios > Jerarquía</strong>. Mantenga pulsado sobre un elemento y arrástrelo para modificar su posición.</p>
+
+							<img src="assets/images/services/tree/tree.png" class="img-thumbnail" alt="">
+
+							<p class="mt-3">Al presionar sobre <strong>guardar cambios</strong> se despliega una notificación sobre la acción:</p>
+
+							<img src="assets/images/services/tree/success.png" class="img-thumbnail" alt="">
+
+						</section>
+
+					</section><!--//section-->
+					
+
+					<!-- plans -->
+					<section class="docs-section" id="section-plans">
+						<h1 class="docs-heading">Planes</h1>
+						<section class="docs-intro">
+							<p></p>
+						</section><!--//docs-intro-->
+
+						<section id="item-plans-index" class="docs-section">
+							<!-- Listar planes -->
+							<h4>
+								<span class="vertical-line"></span>
+								Listar planes:
+							</h4>
+							<p>Navegue hasta <strong>Planes</strong>.</p>
+							
+							<img src="assets/images/plans/index/list.png" class="img-thumbnail" alt="">
+						</section>
+
+						<section id="item-plans-create" class="docs-section mt-3">
+							<!-- Crear servicio -->
+							<h4>
+								<span class="vertical-line"></span>
+								Crear plan:
+							</h4>
+							<p>Navegue hasta <strong>Planes</strong> y presione sobre el botón <i class="fa fa-plus text-primary"></i>.</p>
+							<p>A continuación se despliega un formulario para ingresar los datos.</p>
+
+							<img src="assets/images/plans/create/form.png" width="700px" class="img-thumbnail" alt="">
+
+							<div class="callout-block callout-block-info">
+								<div class="content">
+									<h4 class="callout-title">
+										<span class="callout-icon-holder me-1">
+											<i class="fas fa-info-circle"></i>
+										</span><!--//icon-holder-->
+										Nota
+									</h4>
+									<p>
+										Los campos marcados con <span class="text-danger">*</span> son requeridos.
+									</p>
+								</div><!--//content-->
+							</div><!--//callout-block-->
+
+							<p>Se realizan las siguientes validaciones:</p>
+							<ul>
+
+								<li>
+									Nombre:
+									<ul>
+										<li>Requerido</li>
+										<li>Máximo de 75 caracteres</li>
+										<li>Verificar que no exista otro servicio con el nombre ingresado</li>
+									</ul>
+								</li>
+
+								<li>
+									Descripción:
+									<ul>
+										<li>Requerido</li>
+										<li>Máximo de 255 caracteres</li>
+									</ul>
+								</li>
+									
+								<li>
+									Duración:
+									<ul>
+										<li>Requerido</li>
+										<li>Numérico</li>
+										<li>Superior a cero</li>
+									</ul>
+								</li>
+
+								<li>
+									Precio:
+									<ul>
+										<li>Requerido</li>
+										<li>Numérico</li>
+										<li>Igual o superior a cero</li>
+									</ul>
+								</li>
+
+							</ul>
+
+							<p>En caso que alguna de las validaciones no se cumplan se procede a mostrar los mensajes pertinentes:</p>
+
+							<img src="assets/images/plans/create/validation.png" width="700px" class="img-thumbnail" alt="">
+
+							<p class="mt-5">Una vez realizadas las validaciones necesarias se despliega una notificación:</p>
+
+							<img src="assets/images/plans/create/success.png" class="img-thumbnail" alt="">
+						</section>
+
+
+						<section id="item-plans-edit" class="docs-section">
+							<h4>
+								<span class="vertical-line"></span>
+								Editar plan:
+							</h4>
+
+							<p>Presione sobre el ícono <i class="fa fa-edit text-warning"></i> para abrir el formulario de edición.</p>
+
+							<img src="assets/images/plans/edit/form.png" width="700px" class="img-thumbnail" alt="">
+
+							<div class="callout-block callout-block-info">
+								<div class="content">
+									<h4 class="callout-title">
+										<span class="callout-icon-holder me-1">
+											<i class="fas fa-info-circle"></i>
+										</span><!--//icon-holder-->
+										Nota
+									</h4>
+									<p>
+										Los campos marcados con <span class="text-danger">*</span> son requeridos.
+									</p>
+								</div><!--//content-->
+							</div><!--//callout-block-->
+
+							<p>Se realizan las siguientes validaciones:</p>
+							<ul>
+
+								<li>
+									Nombre:
+									<ul>
+										<li>Requerido</li>
+										<li>Máximo de 75 caracteres</li>
+										<li>Verificar que no exista otro servicio con el nombre ingresado</li>
+									</ul>
+								</li>
+
+								<li>
+									Descripción:
+									<ul>
+										<li>Requerido</li>
+										<li>Máximo de 255 caracteres</li>
+									</ul>
+								</li>
+									
+								<li>
+									Duración:
+									<ul>
+										<li>Requerido</li>
+										<li>Numérico</li>
+										<li>Superior a cero</li>
+									</ul>
+								</li>
+
+								<li>
+									Precio:
+									<ul>
+										<li>Requerido</li>
+										<li>Numérico</li>
+										<li>Igual o superior a cero</li>
+									</ul>
+								</li>
+
+							</ul>
+
+							<p class="mt-5">Se despliega una notificación sobre la acción:</p>
+
+							<img src="assets/images/plans/edit/success.png" alt="">
+						</section>
+
+						<section id="item-plans-delete" class="docs-section">
+							<h4>
+								<span class="vertical-line"></span>
+								Eliminar plan
+							</h4>
+
+							<p>Presione sobre el ícono <i class="fa fa-trash text-danger"></i> para eliminar un plan.</p>
+
+							<div class="callout-block callout-block-warning my-5">
+								<div class="content">
+									<h4 class="callout-title">
+										<span class="callout-icon-holder me-1">
+											<i class="fas fa-bullhorn"></i>
+										</span><!--//icon-holder-->
+										Atención
+									</h4>
+									<p>Si el registro que se desea eliminar es el plan gratuito para que los especialistas tengan un período de prueba, se le notificará la siguiente alerta.</p>
+								</div><!--//content-->
+							</div><!--//callout-block-->
+
+							<img src="assets/images/plans/delete/error.png" class="img-thumbnail" alt="">
+
+							<p class="mt-3">Caso contrario se despliega una notificación sobre la acción:</p>
+
+							<img src="assets/images/plans/delete/success.png" class="img-thumbnail" alt="">
+						</section>
+							
+						<section id="item-plans-restore" class="docs-section">
+							<h4>
+								<span class="vertical-line"></span>
+								Restaurar plan
+							</h4>
+
+							<p>Presione sobre el ícono <i class="fa fa-recycle text-success"></i> para restaurar un plan.</p>
+
+							<p>Se despliega una notificación sobre la acción:</p>
+
+							<img src="assets/images/plans/restore/success.png" class="img-thumbnail" alt="">
+						</section>
+					</section>
+					<!-- /.plans -->
+
+
+					<!-- providers -->
+					<section class="docs-section" id="section-providers">
+						<h1 class="docs-heading">Prestadores de servicios</h1>
+						<section class="docs-intro">
+							<p>Antes de completar el formulario para ser prestador de servicio, se debe llevar a cabo un previo <a href="#">registro</a>.</p>
+						</section><!--//docs-intro-->
+
+						<section id="item-provider-form" class="docs-section">
+							<h4 class="mb-5">
+								<span class="vertical-line"></span>
+								Formulario de registro:
+							</h4>
+							
+							<img src="assets/images/frontend/providers/form-register/form.png" class="img-thumbnail" alt="">
+
+							<p class="mt-3">Se realizan las siguientes validaciones:</p>
+							<ul>
+
+								<li>
+									Nombre:
+									<ul>
+										<li>Requerido</li>
+										<li>Máximo de 75 caracteres</li>
+									</ul>
+								</li>
+
+								<li>
+									Apellido:
+									<ul>
+										<li>Requerido</li>
+										<li>Máximo de 75 caracteres</li>
+									</ul>
+								</li>
+									
+								<li>
+									Documento:
+									<ul>
+										<li>Requerido</li>
+										<li>Numérico</li>
+										<li>Máximo de 8 caracteres</li>
+										<li>Dígito verificador válido</li>
+									</ul>
+								</li>
+
+								<li>
+									Ciudad:
+									<ul>
+										<li>Requerido</li>
+									</ul>
+								</li>
+
+								<li>
+									Localidad:
+									<ul>
+										<li>Requerido</li>
+										<li>Máximo de 75 caracteres</li>
+									</ul>
+								</li>
+
+								<li>
+									Dirección:
+									<ul>
+										<li>Requerido</li>
+										<li>Máximo de 75 caracteres</li>
+									</ul>
+								</li>
+
+								<li>
+									Teléfono:
+									<ul>
+										<li>Numérico</li>
+										<li>Máximo de 15 caracteres</li>
+									</ul>
+								</li>
+
+								<li>
+									Celular:
+									<ul>
+										<li>Requerido</li>
+										<li>Numérico</li>
+										<li>Máximo de 15 caracteres</li>
+									</ul>
+								</li>
+
+							</ul>
+
+							<div class="alert alert-primary" role="alert">
+								Tras completar el formulario con éxito se le redirige al usuario notificandole sobre la acción.
+							</div>
+
+							<img src="assets/images/frontend/providers/form-register/success.png" class="img-thumbnail" alt="">
+
+						</section>
+
+						<section id="item-provider-profile" class="docs-section">
+							<h4>
+								<span class="vertical-line"></span>
+								Perfi:
+							</h4>
+							<p>Luego de completar el formulario, se le da la posibilidad al usuario de completar su perfil. Dirigiéndolos a la siguiente URL:</p>
+							<p><a href="http://127.0.0.1:8000/my-account/" target="_blank">http://127.0.0.1:8000/my-account</a></p>
+
+							<div class="callout-block callout-block-info">
+								<div class="content">
+									<h4 class="callout-title">
+										<span class="callout-icon-holder me-1">
+											<i class="fas fa-info-circle"></i>
+										</span><!--//icon-holder-->
+										Nota
+									</h4>
+									<p>
+										Solo podrán acceder a la URL mencionada los usuarios autenticados y aquellos que posean el rol de prestador de servicios.
+									</p>
+								</div><!--//content-->
+							</div><!--//callout-block-->
+
+							<h5>El prestador podra:</h5>
+							<ul>
+								<li>Añadir foto de perfil</li>
+								<li>Editar datos personales</li>
+								<li>Describir autobibliografía</li>
+								<li>Ingresar experiencia laboral</li>
+								<li>Ingresar formación académica</li>
+								<li>Seleccionar servicios a brindar</li>
+								<li>Detallar si tiene vehículo</li>
+							</ul>
+
+							<img src="assets/images/frontend/providers/profile/my-account.png" class="img-thumbnail" alt="">
+						</section>
+
+
+						<section id="item-provider-avatar" class="docs-section">
+							<h4>
+								<span class="vertical-line"></span>
+								Foto de perfil:
+							</h4>
+
+							<p>Presione sobre el ícono <i class="fa fa-camera text-dark"></i> que encuadra la imagen para editar la foto de perfil.</p>
+
+							<img src="assets/images/frontend/providers/profile/photo/form.png" class="img-thumbnail" alt="">
+
+							<div class="callout-block callout-block-info">
+								<div class="content">
+									<h4 class="callout-title">
+										<span class="callout-icon-holder me-1">
+											<i class="fas fa-info-circle"></i>
+										</span><!--//icon-holder-->
+										Nota
+									</h4>
+									<p>
+										Los campos marcados con <span class="text-danger">*</span> son requeridos.
+									</p>
+								</div><!--//content-->
+							</div><!--//callout-block-->
+
+							<p>Se realizan las siguientes validaciones:</p>
+							<ul>
+
+								<li>
+									Imagen:
+									<ul>
+										<li>Requerida</li>
+										<li>Tipo JPG, JPEG, PNG</li>
+									</ul>
+								</li>
+
+							</ul>
+
+							<p>Se despliega una notificación sobre la acción:</p>
+
+							<img src="assets/images/frontend/providers/profile/photo/success.png" class="img-thumbnail" alt="">
+						</section>
+
+						<section id="item-provider-data" class="docs-section">
+							<h4>
+								<span class="vertical-line"></span>
+								Datos personales
+							</h4>
+
+							<p>Presione sobre el ícono <strong>Datos personales <i class="fa fa-pencil text-info"></i></strong> para editarlos.</p>
+
+							<img src="assets/images/frontend/providers/profile/personal_information/form.png" class="img-thumbnail" alt="">
+
+							<p class="mt-3">
+								Se realizan las siguientes validaciones:
+								<span class="text-danger">*</span> Idem formulario de registro de proveedor.
+							</p>
+
+							<p>Se despliega una notificación sobre la acción:</p>
+
+							<img src="assets/images/frontend/providers/profile/personal_information/success.png" class="img-thumbnail" alt="">
+						</section>
+
+						<section id="item-provider-resume" class="docs-section">
+							<h4>
+								<span class="vertical-line"></span>
+								Resumen
+							</h4>
+
+							<p>Presione sobre el ícono <strong>Resumen <i class="fa fa-pencil text-info"></i></strong> para editarlo.</p>
+
+							<img src="assets/images/frontend/providers/profile/resume/form.png" class="img-thumbnail" alt="">
+
+							<p>Se realizan las siguientes validaciones:</p>
+							<ul>
+
+								<li>
+									Resumen:
+									<ul>
+										<li>Requerido</li>
+										<li>Máximo de 1024 caracteres</li>
+									</ul>
+								</li>
+
+							</ul>
+
+							<p>Se despliega una notificación sobre la acción:</p>
+
+							<img src="assets/images/frontend/providers/profile/resume/success.png" class="img-thumbnail" alt="">
+						</section>
+
+						<section id="item-provider-experiences" class="docs-section">
+							<h4>
+								<span class="vertical-line"></span>
+								Ingresar experiencia laboral
+							</h4>
+
+							<p>Presione sobre el ícono <i class="fa fa-plus text-info"></i> para añadir.</p>
+
+							<img src="assets/images/frontend/providers/experiences/create/form.png" class="img-thumbnail" alt="">
+
+							<p class="mt-3">Se realizan las siguientes validaciones:</p>
+							<ul>
+								<li>
+									Nombre del cargo:
+									<ul>
+										<li>Requerido</li>
+										<li>Máximo de 75 caracteres</li>
+									</ul>
+								</li>
+
+								<li>
+									Nivel jerárquico:
+									<ul>
+										<li>Requerido</li>
+										<li>Opción válida</li>
+									</ul>
+								</li>
+
+								<li>
+									Descripción:
+									<ul>
+										<li>Requerido</li>
+										<li>Máximo de 1024 caracteres</li>
+									</ul>
+								</li>
+
+								<li>
+									Desde:
+									<ul>
+										<li>Requerido</li>
+										<li>Formato fecha</li>
+										<li>Inferior a la fecha actual</li>
+									</ul>
+								</li>
+
+								<li>
+									Hasta:
+									<ul>
+										<li>Requerido si la opción <strong>Sigo trabajando aquí</strong> no está seleccionada</li>
+										<li>Formato fecha</li>
+										<li>Inferior a la fecha actual</li>
+										<li>Inferior a la fecha de inicio (Desde)</li>
+									</ul>
+								</li>
+							</ul>
+
+							<p>Se despliega una notificación sobre la acción:</p>
+
+							<img src="assets/images/frontend/providers/experiences/create/success.png" class="img-thumbnail" alt="">
+						</section>
+
+						<section class="docs-section">
+							<h4>
+								<span class="vertical-line"></span>
+								Editar experiencia laboral
+							</h4>
+
+							<p>Presione sobre el ícono <i class="fa fa-pencil text-info"></i> para editar.</p>
+
+							<img src="assets/images/frontend/providers/experiences/edit/form.png" class="img-thumbnail" alt="">
+
+							<p class="mt-3">Se realizan las siguientes validaciones: Idem al <a href="#item-profie-experiences-create">formulario de creación</a>.</p>
+
+							<p>Se despliega una notificación sobre la acción:</p>
+
+							<img src="assets/images/frontend/providers/experiences/edit/success.png" class="img-thumbnail" alt="">
+						</section>
+
+						<section class="docs-section">
+							<h4>
+								<span class="vertical-line"></span>
+								Eliminar experiencia laboral
+							</h4>
+
+							<p>Presione sobre el ícono <i class="fas fa-trash-alt text-danger"></i> para remover.</p>
+							<p>A continuación se despliega una ventana de diálogo para conformar la acción:</p>
+
+							<img src="assets/images/frontend/providers/experiences/delete/confirm.png" class="img-thumbnail" alt="">
+
+							<p class="mt-3">Se despliega una notificación sobre la acción:</p>
+
+							<img src="assets/images/frontend/providers/experiences/delete/success.png" class="img-thumbnail" alt="">
+						</section>
+
+						<section id="item-provider-courses" class="docs-section">
+							<h4>
+								<span class="vertical-line"></span>
+								Ingresar formación académica
+							</h4>
+
+							<p>Presione sobre el ícono <i class="fa fa-plus text-info"></i> para añadir.</p>
+
+							<img src="assets/images/frontend/providers/courses/create/form.png" class="img-thumbnail" alt="">
+
+							<p class="mt-3">Se realizan las siguientes validaciones:</p>
+							<ul>
+								<li>
+									Título:
+									<ul>
+										<li>Requerido</li>
+										<li>Máximo de 75 caracteres</li>
+									</ul>
+								</li>
+
+								<li>
+									Nivel académico:
+									<ul>
+										<li>Requerido</li>
+										<li>Opción válida</li>
+									</ul>
+								</li>
+
+								<li>
+									Nombre de institución:
+									<ul>
+										<li>Requerido</li>
+										<li>Máximo de 75 caracteres</li>
+									</ul>
+								</li>
+
+								<li>
+									Descripción:
+									<ul>
+										<li>Requerido</li>
+										<li>Máximo de 1024 caracteres</li>
+									</ul>
+								</li>
+
+								<li>
+									Desde:
+									<ul>
+										<li>Requerido</li>
+										<li>Formato fecha</li>
+										<li>Inferior a la fecha actual</li>
+									</ul>
+								</li>
+
+								<li>
+									Hasta:
+									<ul>
+										<li>Requerido si la opción <strong>Sigo trabajando aquí</strong> no está seleccionada</li>
+										<li>Formato fecha</li>
+										<li>Inferior a la fecha actual</li>
+										<li>Inferior a la fecha de inicio (Desde)</li>
+									</ul>
+								</li>
+							</ul>
+
+							<p>Se despliega una notificación sobre la acción:</p>
+
+							<img src="assets/images/frontend/providers/courses/create/success.png" class="img-thumbnail" alt="">
+						</section>
+
+						<section class="docs-section">
+							<h4>
+								<span class="vertical-line"></span>
+								Editar formación académica
+							</h4>
+
+							<p>Presione sobre el ícono <i class="fa fa-pencil text-info"></i> para editar.</p>
+
+							<img src="assets/images/frontend/providers/courses/edit/form.png" class="img-thumbnail" alt="">
+
+							<p class="mt-3">Se realizan las siguientes validaciones: Idem al <a href="#item-profie-experiences-create">formulario de creación</a>.</p>
+
+							<p>Se despliega una notificación sobre la acción:</p>
+
+							<img src="assets/images/frontend/providers/courses/edit/success.png" class="img-thumbnail" alt="">
+						</section>
+
+						<section class="docs-section">
+							<h4>
+								<span class="vertical-line"></span>
+								Eliminar formación académica
+							</h4>
+
+							<p>Presione sobre el ícono <i class="fas fa-trash-alt text-danger"></i> para remover.</p>
+							<p>A continuación se despliega una ventana de diálogo para conformar la acción:</p>
+
+							<img src="assets/images/frontend/providers/courses/delete/confirm.png" class="img-thumbnail" alt="">
+
+							<p class="mt-3">Se despliega una notificación sobre la acción:</p>
+
+							<img src="assets/images/frontend/providers/courses/delete/success.png" class="img-thumbnail" alt="">
+						</section>
+
+						<section id="item-provider-services" class="docs-section">
+							<h4>
+								<span class="vertical-line"></span>
+								Servicios
+							</h4>
+
+							<p>El prestador podrá añadir de una lista desplegable, los servicios que desea proporcionar.</p>
+
+							<img src="assets/images/frontend/providers/services/select.png" class="img-thumbnail" alt="">
+
+							<p class="mt-3">Al presionarlos, en la parte inferior se agregan a una lista como muestra la siguiente imagen:</p>
+
+							<img src="assets/images/frontend/providers/services/menu.png" class="img-thumbnail" alt="">
+							
+							<p class="mt-3">Para remover o dejar de brindar un servicio presione sobre el ícono <i class="fa fa-close text-danger"></i></p>
+
+							<p>Se despliegará un diálogo de confirmación:</p>
+
+							<img src="assets/images/frontend/providers/services/dialog.png" class="img-thumbnail" alt="">
+
+							<p class="mt-3">Tras confirmar se despliega una notificación sobre la acción:</p>
+
+							<img src="assets/images/frontend/providers/services/deleted.png" class="img-thumbnail" alt="">
+
+						</section>
+
+						<section id="item-provider-vehicle" class="docs-section">
+							<h4>
+								<span class="vertical-line"></span>
+								Transporte
+							</h4>
+
+							<p>El prestador podrá seleccionar si cuenta con vehículo propio.</p>
+
+							<img src="assets/images/frontend/providers/vehicle/menu.png" class="img-thumbnail" alt="">
+
+							<p class="mt-3">Al marcar o desmarcar la opción se muestran las notificaciones pertinentes:</p>
+
+							<img src="assets/images/frontend/providers/vehicle/yes.png" class="img-thumbnail" alt="">
+
+							<img src="assets/images/frontend/providers/vehicle/no.png" class="img-thumbnail" alt="">
+
+						</section>
+
+						<section id="item-provider-plans" class="docs-section">
+							<h4>
+								<span class="vertical-line"></span>
+								Planes
+							</h4>
+
+							<p>Los prestadores podrán acceder al listado de planes disponibles desde el siguiente enlace: <a href="http://127.0.0.1:8000/plans" target="_blank">http://127.0.0.1:8000/plans</a></p>
+
+							<div class="callout-block callout-block-info">
+								<div class="content">
+									<h4 class="callout-title">
+										<span class="callout-icon-holder me-1">
+											<i class="fas fa-info-circle"></i>
+										</span><!--//icon-holder-->
+										Nota
+									</h4>
+									<p>
+										Solo los usuarios autenticados que tengan el rol de proveedor podrán acceder a la URL.
+									</p>
+								</div><!--//content-->
+							</div><!--//callout-block-->
+
+							<img src="assets/images/plans/pricing.png" class="img-thumbnail" alt="">
+
+							<p class="mt-5">Al seleccionar en comprar, redirige a otro sitio para seleccionar el método de pago:</p>
+
+							<img src="assets/images/plans/pricing-show.png" class="img-thumbnail" alt="">
+
+						</section>
+
+						<section id="item-provider-mercadopago" class="docs-section">
+							<h4 class="mb-5">
+								<span class="vertical-line"></span>
+								Mercadopago:
+							</h4>
+							<p class="mt-3">Utilizamos la librería de MercadoPago para gestionar los pagos que realizan los prestadores de servicios para adquirir un plan. A continuacion se realiza una demostración utilizando el modo Sandbox de la librería de Mercadopago.</p>
+							<p>Al presionar sobre el botón <strong>Comprar</strong> se despliega el siguiente formulario:</p>
+
+							<div class="callout-block callout-block-info my-5">
+								<div class="content">
+									<h4 class="callout-title">
+										<span class="callout-icon-holder me-1">
+											<i class="fas fa-info-circle"></i>
+										</span><!--//icon-holder-->
+										Nota
+									</h4>
+									<p>
+										Para éste ejemplo de proceso de compra seleccionaremos la opción <strong>*Nueva Tarjeta*</strong>.
+									</p>
+								</div><!--//content-->
+							</div><!--//callout-block-->
+
+							<img src="assets/images/mercadopago/1.png" class="img-thumbnail" alt="">
+
+							<p class="mt-5">A continuación se despliega un formulario para completar los datos. MercadoPago nos brinda dos tarjetas de prueba:</p>
+							
+							<div class="col-9">
+								<table class="table my-5">
+									<thead class="thead-dark">
+									  <tr>
+										<th scope="col">Tarjeta</th>
+										<th scope="col">Número</th>
+										<th scope="col">Código de seguridad</th>
+										<th scope="col">Fecha de caducidad</th>
+									  </tr>
+									</thead>
+									<tbody>
+									  <tr>
+										<th scope="row">Mastercard</th>
+										<td>5031 7557 3453 0604</td>
+										<td>123</td>
+										<td>11/25</td>
+									  </tr>
+									  <tr>
+										<th scope="row">Visa</th>
+										<td>4509 9535 6623 3704</td>
+										<td>123</td>
+										<td>11/25</td>
+									  </tr>
+									</tbody>
+								  </table>
+							</div>
+							
+							<img src="assets/images/mercadopago/2.png" class="img-thumbnail" alt="">
+
+							<p class="mt-5">Ingresamos cédula de identidad:</p>
+
+							<img src="assets/images/mercadopago/3.png" class="img-thumbnail" alt="">
+
+							<p class="mt-5">Seleccionamos las cuotas:</p>
+
+							<img src="assets/images/mercadopago/4.png" class="img-thumbnail" alt="">
+
+							<p class="mt-5">Ingresamos correo electrónico y presionamos sobre <strong>*Pagar*</strong>:</p>
+
+							<img src="assets/images/mercadopago/5.png" class="img-thumbnail" alt="">
+
+							<p class="mt-5">Se despliega una alerta sobre la operación realizada:</p>
+
+							<img src="assets/images/mercadopago/6.png" class="img-thumbnail" alt="">
+
+						</section>
+
+					</section>
+					<!-- /.providers -->
+
+					<!-- mercadopago -->
+					<section class="docs-section" id="section-orders">
+						<h1 class="docs-heading">Compras</h1>
+						<section class="docs-intro">
+							<p>Nuestra plataforma permite realizar pagos online para que los prestadores de servicios puedan adquirir un plan.</p>
+						</section><!--//docs-intro-->
+
+					</section>
+					<!-- /.providers -->
+
+					<section class="docs-section" id="section-web">
+						<h1 class="docs-heading">Web</h1>
+
+						<section class="docs-intro">
+							<p>Ingresá a: <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> para acceder a la página principal. Será lo primero que vean los visitantes tras ingresar al sitio.</p>
+						</section><!--//docs-intro-->
+
+						<section id="item-customers" class="docs-section">
+							<!-- Listar planes -->
+							<h4>
+								<span class="vertical-line"></span>
+								Clientes:
+							</h4>
+							<p>Navegando a través de las secciones de la vista principal, se visualiza un carrousel con algunos de los servicios pre-cargados. En la parte inferior, se encuentra un input para realizar una búsqueda.</p>
+							<p>Si la misma presenta resultados se procede a mostrar los servicios relacionados a la búsqueda realizada:</p>
+							
+							<img src="assets/images/frontend/index/search-services.png" class="img-thumbnail" alt="">
+
+							<div class="callout-block callout-block-info mt-5">
+								<div class="content">
+									<h4 class="callout-title">
+										<span class="callout-icon-holder me-1">
+											<i class="fas fa-info-circle"></i>
+										</span><!--//icon-holder-->
+										Nota
+									</h4>
+									<p>
+										La consulta se realiza 800 milisegundos luego de pulsada una tecla con el objetivo de evitar peticiones exesivas al servidor.
+									</p>
+								</div>
+							</div>
+
+							<p class="mt-5">Dado el caso en donde no aparezcan resultados, se le notifica una alerta solicitando que utilice palabras clave.</p>
+
+							<img src="assets/images/frontend/index/search-services-2.png" class="img-thumbnail" alt="">
+
+							<p class="mt-5">Además se le proporciona un enlace para realizar la búsqueda del servicio por categoría mediante un menú desplegable:</p>
+
+							<img src="assets/images/frontend/index/search-services-3.png" class="img-thumbnail" alt="">
+
+							<p class="mt-5">Al seleccionar por ejemplo <strong>*Electrisista*</strong>, se muestran todos los proveedores registrados en la plataforma que brinden ese servicio con la posibilidad de filtrar por puntaje o zona.</p>
+							<p>Además, los visitantes pueden acceder a cada perfil pudiendo ver:</p>
+							<ul>
+								<li>Experiencia laboral</li>
+								<li>Formación académica</li>
+								<li>Reseñas</li>
+							</ul>
+						
+							<img src="assets/images/frontend/index/search-services-4.png" class="img-thumbnail" alt="">
+
+							<div class="callout-block callout-block-info mt-5">
+								<div class="content">
+									<h4 class="callout-title">
+										<span class="callout-icon-holder me-1">
+											<i class="fas fa-info-circle"></i>
+										</span><!--//icon-holder-->
+										Nota
+									</h4>
+									<p>
+										Se utiliza paginación para realizar la búsqueda, evitando de ésta manera la sobrecarga del servidor dividiendo la consulta en segmentos.
+									</p>
+								</div>
+							</div>
+
+						</section>
+
+					</section><!--//section-->
+
+				</article>
+
+				<footer class="footer">
+					<div class="container text-center py-5">
+						<!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+						<small class="copyright">
+							Desarrollado por
+							<a class="theme-link" href="javascript:void(0)">esuru</a>
+						</small>
+						<ul class="social-list list-unstyled pt-4 mb-0">
+							<li class="list-inline-item"><a href="https://github.com/German-Cinelli/ta3-iti-2023" target="_blank"><i class="fab fa-github fa-fw"></i></a></li>
+						</ul><!--//social-list-->
+					</div>
+				</footer>
+			</div>
+		</div>
+	</div><!--//docs-wrapper-->
+
+
+	<!-- Javascript -->
+	<script src="assets/plugins/popper.min.js"></script>
+	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+
+	<!-- Page Specific JS -->
+	<script src="assets/plugins/smoothscroll.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+	<script src="assets/js/highlight-custom.js"></script>
+	<script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
+	<script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
+	<script src="assets/js/docs.js"></script>
+
+</body>
+
+</html>
