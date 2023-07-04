@@ -339,6 +339,8 @@
 								<li>Correo: <strong>admin@esuru.uy</strong></li>
 								<li>Contraseña: <strong>1234</strong></li>
 							</ul>
+
+							<p>Tras autenticarse puedes acceder al panel administrativo desde el siguiente enlace: <a href="http://127.0.0.1:8000/dashboard/users" target="_blank">http://127.0.0.1:8000/dashboard/users</a></p>
 						</section>
 
 					</header>
@@ -1197,8 +1199,20 @@
 								<span class="vertical-line"></span>
 								Perfi:
 							</h4>
-							<p>Luego de completar el formulario, se le da la posibilidad al usuario de completar su perfil. Dirigiéndolos a la siguiente URL:</p>
-							<p><a href="http://127.0.0.1:8000/my-account/" target="_blank">http://127.0.0.1:8000/my-account</a></p>
+							<p>Puedes logearte con un usuario de tipo prestador con las siguientes credenciales:</p>
+
+							<ul>
+								<li>
+									Correo: <strong>jperez@example.com</strong>
+								</li>
+								<li>
+									Contraseña: <strong>1234</strong>
+								</li>
+							</ul>
+
+							<p>Para hacerlo dirigete a la ruta del login: <a href="http://127.0.0.1:8000/login" target="_blank">http://127.0.0.1:8000/login</a>.</p>
+
+							<p>Tras autenticarse puedes redirigirte a la sección del perfil mediante la siguiente URL: <a href="http://127.0.0.1:8000/my-account" target="_blank">http://127.0.0.1:8000/my-account</a></p>
 
 							<div class="callout-block callout-block-info">
 								<div class="content">
@@ -1213,8 +1227,8 @@
 									</p>
 								</div><!--//content-->
 							</div><!--//callout-block-->
-
-							<h5>El prestador podra:</h5>
+							
+							<h5 class="mt-5">El prestador podra:</h5>
 							<ul>
 								<li>Añadir foto de perfil</li>
 								<li>Editar datos personales</li>
@@ -1533,7 +1547,7 @@
 
 							<p>Se despliegará un diálogo de confirmación:</p>
 
-							<img src="assets/images/frontend/providers/services/dialog.png" class="img-thumbnail" alt="">
+							<img src="assets/images/frontend/providers/services/dialog.png" width="500px" class="img-thumbnail" alt="">
 
 							<p class="mt-3">Tras confirmar se despliega una notificación sobre la acción:</p>
 
@@ -1613,7 +1627,7 @@
 
 							<img src="assets/images/mercadopago/1.png" class="img-thumbnail" alt="">
 
-							<p class="mt-5">A continuación se despliega un formulario para completar los datos. MercadoPago nos brinda dos tarjetas de prueba:</p>
+							<p class="mt-5">A continuación se despliega un formulario para completar los datos. Procedemos a escoger una de las tarjetas:</p>
 							
 							<div class="col-9">
 								<table class="table my-5">
@@ -1669,7 +1683,7 @@
 						<h1 class="docs-heading">Web</h1>
 
 						<section class="docs-intro">
-							<p>Ingresá a: <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> para acceder a la página principal. Será lo primero que vean los visitantes tras ingresar al sitio.</p>
+							<p>Ingresá a: <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> para acceder a la página principal.</p>
 						</section><!--//docs-intro-->
 
 						<section id="item-customers" class="docs-section">
@@ -1701,7 +1715,7 @@
 
 							<img src="assets/images/frontend/index/search-services-2.png" class="img-thumbnail" alt="">
 
-							<p class="mt-5">Además se le proporciona un enlace para realizar la búsqueda del servicio por categoría mediante un menú desplegable:</p>
+							<p class="mt-5">Además se le proporciona un enlace (<a href="http://127.0.0.1:8000/servicios" target="_blank">http://127.0.0.1:8000/servicios</a>) para realizar la búsqueda del servicio por categoría mediante un menú desplegable:</p>
 
 							<img src="assets/images/frontend/index/search-services-3.png" class="img-thumbnail" alt="">
 
@@ -1715,7 +1729,7 @@
 						
 							<img src="assets/images/frontend/index/search-services-4.png" class="img-thumbnail" alt="">
 
-							<div class="callout-block callout-block-info mt-5">
+							<div class="callout-block callout-block-info my-5">
 								<div class="content">
 									<h4 class="callout-title">
 										<span class="callout-icon-holder me-1">
@@ -1724,10 +1738,14 @@
 										Nota
 									</h4>
 									<p>
-										Se utiliza paginación para realizar la búsqueda, evitando de ésta manera la sobrecarga del servidor dividiendo la consulta en segmentos.
+										Se utiliza paginación para mostrar los resultados, evitando de ésta manera la sobrecarga del servidor.
 									</p>
 								</div>
 							</div>
+
+							<p>La paginación se muestra en la parte inferior:</p>
+
+							<img src="assets/images/frontend/index/search-services-5.png" class="img-thumbnail" alt="">
 
 						</section>
 
